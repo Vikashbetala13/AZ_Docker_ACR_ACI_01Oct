@@ -25,4 +25,4 @@ jobs:
 
       - name: Step 4 - Deploy Manifests to AKS
         run: |
-          kubectl apply -f deployment_manifest.yaml
+          kubectl apply -f deployment_manifest.yml
