@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app-deployment-sep28
+  name: web-app-deployment-oct01
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web-app
-          image: reg00sep28.azurecr.io/my-vk-custom-app:v1
+          image: azcontainerreg01oct.azurecr.io/my-vk-01oct-custom-app:v1
           ports:
             - containerPort: 80
 
@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-app-service-sep28
+  name: web-app-service-oct01
 spec:
   type: LoadBalancer
   ports:
