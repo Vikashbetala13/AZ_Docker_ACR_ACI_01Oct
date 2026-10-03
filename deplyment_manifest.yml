@@ -16,7 +16,7 @@ spec:
         - name: web-app
           image: azcontainerreg01oct.azurecr.io/my-vk-01oct-custom-app:v1
           ports:
-            - containerPort: 80
+            - containerPort: 443
 
 ---
 apiVersion: v1
@@ -26,7 +26,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 443
+      targetPort: 443
   selector:
     app: web-app
